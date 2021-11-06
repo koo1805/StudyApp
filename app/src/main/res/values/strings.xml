@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">StudyApp</string>
+
+    //페이스북
+    <string name="facebook_app_id">599532087906146</string>
+    <string name="fb_login_protocol_scheme">fb599532087906146</string>
+
+
+</resources>

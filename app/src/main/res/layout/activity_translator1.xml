@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".translator1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:id="@+id/from_spinner"
+            android:textAlignment="center"
+            android:background="@color/grey"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:entries="@array/langs"/>
+        <Spinner
+            android:id="@+id/to_spinner"
+            android:textAlignment="center"
+            android:background="@color/grey"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:entries="@array/langs"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <EditText
+            android:id="@+id/inputText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:hint="언어를 입력해주세요"
+            />
+
+        <TextView
+            android:id="@+id/outTextView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:hint="번역문이 출력됩니다"
+            />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/speakBtn"
+        android:layout_below="@id/inputText"
+        android:drawableLeft="@drawable/ic_speak"
+        android:drawablePadding="5sp"
+        android:textSize="20dp"
+        android:backgroundTint="@color/blue"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Speak"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:drawableStart="@drawable/ic_speak"/>
+
+    <Button
+        android:id="@+id/stopBtn"
+        android:layout_below="@id/inputText"
+        android:drawableLeft="@drawable/ic_stop"
+        android:drawablePadding="5sp"
+        android:textSize="20dp"
+        android:backgroundTint="@color/red"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Stop"
+        android:layout_alignParentEnd="true"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:drawableStart="@drawable/ic_stop"/>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_below="@id/inputText"
+        android:drawableLeft="@drawable/ic_camera"
+        android:textSize="20dp"
+        android:backgroundTint="@color/orange"
+        android:drawablePadding="5sp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="이미지 텍스트 추출하기"
+        android:layout_alignParentEnd="true"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:drawableStart="@drawable/ic_camera"/>
+
+    <ImageButton
+        android:id="@+id/voiceBtn"
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_mic" />
+
+
+</LinearLayout>
+</layout>
